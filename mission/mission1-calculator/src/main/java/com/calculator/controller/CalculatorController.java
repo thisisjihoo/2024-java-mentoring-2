@@ -7,9 +7,10 @@ import com.calculator.view.OutputView;
 import java.util.List;
 
 public class CalculatorController {
-    StringCalculator stringCalculator;
-    InputView inputView;
-    OutputView outputView;
+    private final StringCalculator stringCalculator;
+    private final InputView inputView;
+    private final OutputView outputView;
+
 
     public CalculatorController(StringCalculator stringCalculator, InputView inputView, OutputView outputView){
         this.stringCalculator = stringCalculator;
