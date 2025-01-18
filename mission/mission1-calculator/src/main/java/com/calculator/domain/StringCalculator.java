@@ -47,10 +47,10 @@ public class StringCalculator {
     }
 
     public int add(List<Integer> list){
-        int sum = 0;
+        int total = 0;
         for(int i : list)
-            sum += i;
-        return sum;
+            total += i;
+        return total;
     }
 
     private List<Integer> validateEmptyException(List<Integer> numberList){
