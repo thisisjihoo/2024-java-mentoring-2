@@ -2,9 +2,7 @@ package com.calculator.domain;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class StringCalculator {
     private final String INPUT_REG = "[,:]";
@@ -45,10 +43,7 @@ public class StringCalculator {
         for (int number : numbers) {
             numbersList.add(number);
         }
-        if(numbersList.isEmpty()){
-            throw new RuntimeException("0");
-        }
-        return numbersList;
+        return validateEmptyException(numbersList);
     }
 
     public int add(List<Integer> list){
@@ -58,6 +53,12 @@ public class StringCalculator {
         return sum;
     }
 
+    private List<Integer> validateEmptyException(List<Integer> numberList){
+        if(numberList.isEmpty()){
+            throw new RuntimeException();
+        }
+        return numberList;
+    }
 
 }
 
