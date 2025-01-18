@@ -7,11 +7,18 @@ import com.calculator.view.OutputView;
 import java.util.List;
 
 public class CalculatorController {
-    StringCalculator stringCalculator = new StringCalculator();
-    InputView inputView = new InputView();
-    OutputView outputView =new OutputView();
+    StringCalculator stringCalculator;
+    InputView inputView;
+    OutputView outputView;
+
+    public CalculatorController(StringCalculator stringCalculator, InputView inputView, OutputView outputView){
+        this.stringCalculator = stringCalculator;
+        this.inputView = inputView;
+        this.outputView = outputView;
+    }
 
     public void calculatorControl(){
+
         String factor = inputView.InputString();
 
         String message = stringCalculator.subStringMessage(factor);
