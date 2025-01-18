@@ -73,5 +73,6 @@ class StringCalculatorTest {
 
     @Test
     void addIntArray() {
+
     }
 }
