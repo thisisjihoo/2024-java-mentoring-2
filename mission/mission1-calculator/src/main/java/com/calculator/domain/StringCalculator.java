@@ -40,10 +40,14 @@ public class StringCalculator {
 
     public List<Integer> numberList(int[] numbers){
         List<Integer> numbersList = new ArrayList<>();
+        changeList(numbers, numbersList);
+        return validateEmptyException(numbersList);
+    }
+
+    private static void changeList(int[] numbers, List<Integer> numbersList) {
         for (int number : numbers) {
             numbersList.add(number);
         }
-        return validateEmptyException(numbersList);
     }
 
     public int add(List<Integer> list){
