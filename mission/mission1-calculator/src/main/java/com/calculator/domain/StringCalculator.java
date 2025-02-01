@@ -44,7 +44,7 @@ public class StringCalculator {
         return validateEmptyException(numbersList);
     }
 
-    private static void changeList(int[] numbers, List<Integer> numbersList) {
+    private void changeList(int[] numbers, List<Integer> numbersList) {
         for (int number : numbers) {
             numbersList.add(number);
         }
