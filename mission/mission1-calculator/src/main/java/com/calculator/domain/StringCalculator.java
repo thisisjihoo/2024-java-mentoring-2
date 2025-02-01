@@ -3,6 +3,7 @@ package com.calculator.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class StringCalculator {
     private final String INPUT_REG = "[,:]";
@@ -51,10 +52,7 @@ public class StringCalculator {
     }
 
     public int add(List<Integer> list){
-        int total = 0;
-        for(int i : list)
-            total += i;
-        return total;
+        return list.stream().mapToInt(i->i).sum();
     }
 
     private List<Integer> validateEmptyException(List<Integer> numberList){
