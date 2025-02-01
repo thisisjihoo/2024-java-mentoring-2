@@ -28,10 +28,10 @@ class StringCalculatorTest {
         String[] secondResult = stringCalculator.regularSplitString(secondFactor, message);
 
         Assertions.assertAll(
-                () -> assertArrayEquals(firstResult,expect),
+                () -> assertArrayEquals(firstResult, expect),
                 () -> assertArrayEquals(secondResult, expect),
-                () -> assertFalse(Arrays.equals(NotExpect,firstResult)),
-                () -> assertFalse(Arrays.equals(NotExpect,secondResult))
+                () -> assertFalse(Arrays.equals(NotExpect, firstResult)),
+                () -> assertFalse(Arrays.equals(NotExpect, secondResult))
 
         );
 
@@ -67,15 +67,5 @@ class StringCalculatorTest {
         String result = stringCalculator.subStringMessage(factor);
 
         assertEquals(expect, result);
-    }
-
-    @Test
-    void changeStringToInt() {
-
-    }
-
-    @Test
-    void addIntArray() {
-
     }
 }
