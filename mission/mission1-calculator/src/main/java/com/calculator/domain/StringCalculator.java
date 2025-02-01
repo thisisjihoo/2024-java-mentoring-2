@@ -52,7 +52,8 @@ public class StringCalculator {
     }
 
     public int add(List<Integer> list){
-        return list.stream().mapToInt(i->i).sum();
+        int total = list.stream().mapToInt(i->i).sum();
+        return total;
     }
 
     private List<Integer> validateEmptyException(List<Integer> numberList){
