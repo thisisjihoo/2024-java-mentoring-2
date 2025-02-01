@@ -52,12 +52,11 @@ public class StringCalculator {
     }
 
     public int add(List<Integer> list){
-        int total = list.stream().mapToInt(i->i).sum();
-        return total;
+        return list.stream().mapToInt(i->i).sum();
     }
 
     private List<Integer> validateEmptyException(List<Integer> numberList){
-        if(numberList.isEmpty()){
+        if(numberList.stream().anyMatch(num -> num < 0)){
             throw new RuntimeException();
         }
         return numberList;
