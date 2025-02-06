@@ -5,6 +5,7 @@ import com.racing.domain.domain.vo.RandomValue;
 public class Car {
 
     private final RandomValue randomValue;
+    private int count = 0;
 
     public Car(RandomValue randomValue) {
         this.randomValue = randomValue;
@@ -31,7 +32,6 @@ public class Car {
 
 
     public int checkRandomValue(int random) {
-        int count = 0;
         if (random > 3) {
             count++;
         }
