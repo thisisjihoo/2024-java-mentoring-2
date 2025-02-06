@@ -19,13 +19,13 @@ public class Car {
 
     private void NegativeValueException(int number){
         if (number < 0) {
-            throw new RuntimeException();
+            throw new IllegalIndexException();
         }
     }
 
     private void OutOfRangeException(int number){
         if(number > 9){
-            throw new RuntimeException();
+            throw new IllegalIndexException();
         }
     }
 
