@@ -10,6 +10,7 @@ public class RandomValue implements RandomNumber {
     public RandomValue(Random random) {
         this.random = random;
     }
+
     @Override
     public int setRandomValue() {
         return random.nextInt(9);
