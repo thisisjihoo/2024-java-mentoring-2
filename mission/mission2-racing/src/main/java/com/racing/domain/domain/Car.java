@@ -1,5 +1,7 @@
 package com.racing.domain.domain;
 
+import com.racing.domain.domain.vo.RandomValue;
+
 public class Car {
 
     private final RandomValue randomValue;
