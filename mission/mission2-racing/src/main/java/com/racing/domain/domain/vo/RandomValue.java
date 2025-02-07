@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class RandomValue implements RandomNumber {
 
-
     private final Random random;
 
     public RandomValue(Random random) {
@@ -12,7 +11,7 @@ public class RandomValue implements RandomNumber {
     }
 
     @Override
-    public int setRandomValue() {
+    public int randomValue() {
         return random.nextInt(9);
     }
 }
