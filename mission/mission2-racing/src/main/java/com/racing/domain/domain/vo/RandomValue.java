@@ -4,15 +4,14 @@ import java.util.Random;
 
 public class RandomValue implements RandomNumber {
 
-    private final Random random;
-    private final int MAX_RANDOM_VAL = 10;
+    private final RandomNumberValue randomNumberValue;
 
     public RandomValue(Random random) {
-        this.random = random;
+        this.randomNumberValue = new RandomNumberValue(random);
     }
 
     @Override
     public int randomValue() {
-        return random.nextInt(MAX_RANDOM_VAL);
+        return randomNumberValue.getRandomValue();
     }
 }
