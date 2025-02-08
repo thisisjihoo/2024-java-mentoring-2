@@ -6,9 +6,6 @@ import com.racing.domain.exception.IllegalIndexException;
 public class Car {
 
     private final RandomValue randomValue;
-    private final int NEG_VAL = 0;
-    private final int SPEC_RANG = 3;
-    private final int OUT_RANG = 9;
     private int count = 0;
 
     public Car(RandomValue randomValue) {
@@ -23,20 +20,20 @@ public class Car {
     }
 
     private void NegativeValueException(int number){
-        if (number < NEG_VAL) {
+        if (number < Value.NEG_VAL.getValue()) {
             throw new IllegalIndexException();
         }
     }
 
     private void OutOfRangeException(int number){
-        if(number > OUT_RANG){
+        if(number > Value.OUT_RANG.getValue()){
             throw new IllegalIndexException();
         }
     }
 
 
     public int checkRandomValue(int random) {
-        if (random > SPEC_RANG) {
+        if (random > Value.SPEC_RANG.getValue()) {
             count++;
         }
         return count;
