@@ -19,6 +19,13 @@ public class Car {
         return number;
     }
 
+    public int checkRandomValue(int random) {
+        if (random > Value.SPEC_RANG.getValue()) {
+            count++;
+        }
+        return count;
+    }
+
     private void NegativeValueException(int number){
         if (number < Value.NEG_VAL.getValue()) {
             throw new IllegalIndexException();
@@ -29,14 +36,6 @@ public class Car {
         if(number > Value.OUT_RANG.getValue()){
             throw new IllegalIndexException();
         }
-    }
-
-
-    public int checkRandomValue(int random) {
-        if (random > Value.SPEC_RANG.getValue()) {
-            count++;
-        }
-        return count;
     }
 
 }
