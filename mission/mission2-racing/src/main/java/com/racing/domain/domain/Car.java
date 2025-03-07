@@ -1,12 +1,13 @@
 package com.racing.domain.domain;
 
+import com.racing.domain.domain.vo.RandomNumber;
 import com.racing.domain.domain.vo.RandomValue;
 import com.racing.domain.exception.IllegalIndexException;
 
 public class Car {
 
     private final RandomValue randomValue;
-    private int count = 0;
+    private int count = Value.NEG_VAL.getValue();
 
     public Car(RandomValue randomValue) {
         this.randomValue = randomValue;
@@ -36,6 +37,15 @@ public class Car {
         if(number > Value.OUT_RANG.getValue()){
             throw new IllegalIndexException();
         }
+    }
+
+    public int[] repeatCarNumber(int carNumber){
+        int[] carsRandomValue = new int[Value.NEG_VAL.getValue()];
+
+        for(int i = Value.NEG_VAL.getValue(); i < carNumber; i++){
+            carsRandomValue[i] = RandomNumber();
+        }
+        return carsRandomValue;
     }
 
 }
