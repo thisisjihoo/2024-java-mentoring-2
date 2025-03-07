@@ -18,9 +18,6 @@ public class RacingController {
     }
 
     public void Racing(){
-        String carName = inputView.inputCarName();
-        int randomValue = car.RandomNumber();
-        int count = car.checkRandomValue(randomValue);
-        outputView.output(carName,count,randomValue);
+
     }
 }
