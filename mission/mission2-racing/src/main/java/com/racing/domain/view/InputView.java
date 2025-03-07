@@ -11,7 +11,12 @@ public class InputView {
     }
 
     public String inputCarName(){
-        System.out.println("CarName: ");
+        System.out.print("Car Name: ");
         return scanner.next();
+    }
+
+    public int inputCarNumber(){
+        System.out.print("Car Number: ");
+        return scanner.nextInt();
     }
 }
