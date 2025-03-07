@@ -10,9 +10,14 @@ public class InputView {
         this.scanner = scanner;
     }
 
-    public String inputCarName(){
+    public String[] inputCarName(int carNumber){
         System.out.print("Car Name: ");
-        return scanner.next();
+
+        String[] carName = new String[carNumber];
+        for(int i = 0; i < carNumber; i++){
+             carName[i] = scanner.next();
+        }
+        return carName;
     }
 
     public int inputCarNumber(){
