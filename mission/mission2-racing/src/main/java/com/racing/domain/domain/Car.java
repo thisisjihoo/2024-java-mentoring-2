@@ -4,6 +4,8 @@ import com.racing.domain.domain.vo.RandomNumber;
 import com.racing.domain.domain.vo.RandomValue;
 import com.racing.domain.exception.IllegalIndexException;
 
+import java.util.List;
+
 public class Car {
 
     private final RandomValue randomValue;
@@ -15,8 +17,8 @@ public class Car {
 
     public int RandomNumber() {
         int number = randomValue.randomValue();
-        NegativeValueException(number);
-        OutOfRangeException(number);
+        negativeValueException(number);
+        outOfRangeException(number);
         return number;
     }
 
@@ -27,25 +29,34 @@ public class Car {
         return count;
     }
 
-    private void NegativeValueException(int number){
+    private void negativeValueException(int number){
         if (number < Value.NEG_VAL.getValue()) {
             throw new IllegalIndexException();
         }
     }
 
-    private void OutOfRangeException(int number){
+    private void outOfRangeException(int number){
         if(number > Value.OUT_RANG.getValue()){
             throw new IllegalIndexException();
         }
     }
 
-    public int[] repeatCarNumber(int carNumber){
-        int[] carsRandomValue = new int[Value.NEG_VAL.getValue()];
+    public int[] carsRandomValue(List<String> cars){
 
-        for(int i = Value.NEG_VAL.getValue(); i < carNumber; i++){
+        int[] carsRandomValue = new int[0];
+        for(int i = 0; i < cars.size(); i++){
             carsRandomValue[i] = RandomNumber();
         }
         return carsRandomValue;
+    }
+
+    public int[] checkCarMove(int[] carRandomValue){
+
+        int[] carsMove = new int[0];
+        for(int i = 0; i < carRandomValue.length; i++){
+            carsMove[i] = checkRandomValue(carRandomValue[i]);
+        }
+        return carsMove;
     }
 
 }
