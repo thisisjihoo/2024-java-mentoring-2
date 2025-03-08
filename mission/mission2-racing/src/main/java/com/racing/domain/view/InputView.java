@@ -1,5 +1,7 @@
 package com.racing.domain.view;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class InputView {
@@ -10,18 +12,14 @@ public class InputView {
         this.scanner = scanner;
     }
 
-    public String[] inputCarName(int carNumber){
-        System.out.print("Car Name: ");
+    public List<String> inputCarName(){
+        System.out.print("Input Car Name: ");
 
-        String[] carName = new String[carNumber];
-        for(int i = 0; i < carNumber; i++){
-             carName[i] = scanner.next();
+        List<String> cars = new ArrayList<>();
+        while(scanner.hasNext()){
+            cars.add(scanner.next());
         }
-        return carName;
+        return cars;
     }
 
-    public int inputCarNumber(){
-        System.out.print("Car Number: ");
-        return scanner.nextInt();
-    }
 }
