@@ -1,18 +1,35 @@
 package com.racing.domain.domain.vo;
 
+import com.racing.domain.domain.exception.RandomValueOutOfRange;
+
 import java.util.Random;
 
 public class RandomValue implements RandomNumber {
 
-    private final int MAX_RANDOM_VAL = 10;
-    private final int value;
+    private final Random random;
 
     public RandomValue(Random random) {
-        this.value = random.nextInt(MAX_RANDOM_VAL);
+        this.random = random;
     }
 
     @Override
     public int randomValue() {
-        return value;
+        int randomNumber = random.nextInt(Value.MAX_RANDOM_VALUE.getValue());
+        NegativeValueException(randomNumber);
+        OutOfRangeException(randomNumber);
+        return randomNumber;
     }
+
+    private void NegativeValueException(int randomNumber){
+        if (randomNumber < Value.NEGATIVE_VALUE.getValue()) {
+            throw new RandomValueOutOfRange();
+        }
+    }
+
+    private void OutOfRangeException(int randomNumber){
+        if(randomNumber > Value.OUT_OF_RANGE.getValue()){
+            throw new RandomValueOutOfRange();
+        }
+    }
+
 }
