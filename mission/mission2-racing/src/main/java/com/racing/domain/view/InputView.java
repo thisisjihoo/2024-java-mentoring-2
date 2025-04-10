@@ -12,14 +12,9 @@ public class InputView {
         this.scanner = scanner;
     }
 
-    public List<String> inputCarName(){
+    public String inputCarName() {
         System.out.print("Input Car Name: ");
-
-        List<String> cars = new ArrayList<>();
-        while(scanner.hasNext()){
-            cars.add(scanner.next());
-        }
-        return cars;
+        return scanner.nextLine();
     }
 
 }

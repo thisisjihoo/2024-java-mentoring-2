@@ -1,11 +1,9 @@
 package com.racing.domain.domain.Car;
 
-import java.util.List;
-
 public class Car {
 
-    private int OVER_NAME_LENGTH = 5;
-    private int MOVE_CAR = 0;
+    private final int OVER_NAME_LENGTH = 5;
+    private final int MOVE_CAR = 0;
 
     public final String carName;
     public int moveCar;
@@ -28,7 +26,7 @@ public class Car {
         moveCar++;
     }
 
-    public void validateNameLength(String name) {
+    private void validateNameLength(String name) {
         if (name.length() > OVER_NAME_LENGTH) {
             throw new IllegalArgumentException("Car name is too long.");
         }
