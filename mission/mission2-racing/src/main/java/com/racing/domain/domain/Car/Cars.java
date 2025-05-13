@@ -8,7 +8,7 @@ import java.util.List;
 public class Cars {
 
     private final List<Car> cars;
-    private RandomValue randomValue;
+    private final RandomValue randomValue;
 
     public Cars(List<Car> cars, RandomValue randomValue) {
         this.cars = cars;
@@ -21,12 +21,11 @@ public class Cars {
                 .toArray(String[]::new);
     }
 
-    public void splitCarName(String[] carName) {
+    public void addListCarName(String[] carName) {
         for (String name : carName) {
             cars.add(new Car(name.trim()));
         }
     }
-    // List에 exepct 값 지후가 할당하고 저거랑 비교하면되잖아 list 비교하는 게있어
 
     public void whichCarMove() {
         for (Car car : cars) {
