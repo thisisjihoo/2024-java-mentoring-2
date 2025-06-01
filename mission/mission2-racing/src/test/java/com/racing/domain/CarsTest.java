@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CarsTest {
 
@@ -20,6 +19,7 @@ public class CarsTest {
     List<Car> carList = new ArrayList<>();
     RandomValue randomValue = new RandomValue(random);
     Cars cars = new Cars(carList, randomValue);
+
 
     @Test
     void carNameSharingTest() {
@@ -54,6 +54,9 @@ public class CarsTest {
 
     @Test
     void whichCarMoveTest() {
+        String[] carName = {"jihoo", "hoo", "gui", "seung"};
 
+        cars.addListCarName(carName);
+        cars.whichCarMove();
     }
 }

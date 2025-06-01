@@ -30,6 +30,7 @@ public class Cars {
     public void whichCarMove() {
         for (Car car : cars) {
             moveCars(car);
+
         }
     }
 

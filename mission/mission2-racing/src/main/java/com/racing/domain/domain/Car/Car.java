@@ -5,10 +5,10 @@ public class Car {
     private final int OVER_NAME_LENGTH = 5;
     private final int MOVE_CAR = 0;
 
-    public final String carName;
+    public String carName;
     public int moveCar;
 
-    public Car(String carName) {
+    Car(String carName) {
         validateNameLength(carName);
         this.carName = carName;
         this.moveCar = MOVE_CAR;

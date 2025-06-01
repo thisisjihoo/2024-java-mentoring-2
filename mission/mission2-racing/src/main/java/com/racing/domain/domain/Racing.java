@@ -2,8 +2,8 @@ package com.racing.domain.domain;
 
 import com.racing.domain.domain.Car.Car;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Racing {
     private final List<Car> cars;
@@ -12,29 +12,33 @@ public class Racing {
         this.cars = cars;
     }
 
-    public String[] findMoveCars() {
-        List<Car> moveCars = getMoveCars();
-
-        String[] winner = new String[moveCars.size()];
-        for (int i = 0; i < moveCars.size(); i++) {
-            winner[i] = moveCars.get(i).getCarName();
+    public int maxMoveNumber(){
+        int maxMove = 0;
+        for(Car car : cars){
+            maxMove = Math.max(maxMove, car.getMoveCar());
         }
-
-        return winner;
+        return maxMove;
     }
 
-    private List<Car> getMoveCars() {
-        return cars.stream()
-                .filter(this:: isMove)
-                .collect(Collectors.toList());
+    public List<String> winnerName(int maxMove) {
+        List<String> winners = new ArrayList<>();
+        for (Car car : cars) {
+            addWinner(winners, car, maxMove);
+        }
+        return winners;
     }
 
-    private boolean isMove(Car car) {
-        return car.getMoveCar() == 1;
+    public String listToString(List<String> carNames) {
+        return String.join(", ", carNames);
     }
 
-    public String toStringWinner(String[] winner){
-        return winner.toString();
+    private void addWinner(List<String> winners, Car car, int maxMove) {
+        if (car.getMoveCar() == maxMove) {
+            winners.add(car.getCarName());
+        }
     }
+
+
+
 }
 
