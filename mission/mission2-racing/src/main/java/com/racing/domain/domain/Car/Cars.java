@@ -29,12 +29,12 @@ public class Cars {
 
     public void whichCarMove() {
         for (Car car : cars) {
-            moveCars(car);
+            forwardCars(car);
 
         }
     }
 
-    private void moveCars(Car car) {
+    private void forwardCars(Car car) {
         if (checkMove()) {
             car.move();
         }
