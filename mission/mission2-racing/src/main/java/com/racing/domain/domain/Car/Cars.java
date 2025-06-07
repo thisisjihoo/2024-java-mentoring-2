@@ -7,6 +7,8 @@ import java.util.List;
 
 public class Cars {
 
+    private final int STANDARD_MOVING_CAR = 4;
+
     private final List<Car> cars;
     private final RandomValue randomValue;
 
@@ -41,6 +43,6 @@ public class Cars {
     }
 
     private boolean checkMove() {
-        return randomValue.randomValue() >= 4;
+        return randomValue.randomValue() >= STANDARD_MOVING_CAR;
     }
 }
