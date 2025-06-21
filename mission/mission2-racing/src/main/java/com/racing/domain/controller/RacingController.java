@@ -23,7 +23,6 @@ public class RacingController {
 
     public void racingCar(){
         String carNames = inputView.inputCarName(); // 차 이름 입력 받기
-        System.out.println(carNames);
         String[] carNameArray = cars.carNameSharing(carNames); //','로 차이름 나누기
 
         cars.addListCarName(carNameArray);
