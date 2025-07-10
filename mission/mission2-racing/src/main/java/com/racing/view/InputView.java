@@ -15,6 +15,12 @@ public class InputView {
     public String inputCarName() {
         System.out.print("Input Car Name: ");
         return scanner.nextLine();
+
+    }
+
+    public Integer repetitions() {
+        System.out.print("Repetitions: ");
+        return scanner.nextInt();
     }
 
 }
