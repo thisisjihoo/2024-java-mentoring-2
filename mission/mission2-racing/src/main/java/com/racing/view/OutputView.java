@@ -1,4 +1,4 @@
-package com.racing.domain.view;
+package com.racing.view;
 
 public class OutputView {
 

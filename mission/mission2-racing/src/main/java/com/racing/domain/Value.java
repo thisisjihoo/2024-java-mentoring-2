@@ -1,9 +1,11 @@
-package com.racing.domain.domain;
+package com.racing.domain;
 
 public enum Value {
-    NEG_VAL(0),
+    NEGATIVE_VALUE(0),
+    MAX_ZERO_NUMBER(0),
     SPEC_RANG(3),
-    OUT_RANG(9);
+    MAX_RANDOM_VALUE(10),
+    OUT_OF_RANGE(9);
 
     private final int value;
 

@@ -1,8 +1,8 @@
 package com.racing.domain;
 
-import com.racing.domain.domain.Car.Car;
-import com.racing.domain.domain.Car.Cars;
-import com.racing.domain.domain.vo.RandomValue;
+import com.racing.domain.Car.Car;
+import com.racing.domain.Car.Cars;
+import com.racing.domain.vo.RandomValue;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

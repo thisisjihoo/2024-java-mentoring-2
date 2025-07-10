@@ -1,6 +1,6 @@
-package com.racing.domain.domain.Car;
+package com.racing.domain.Car;
 
-import com.racing.domain.domain.vo.RandomValue;
+import com.racing.domain.vo.RandomValue;
 
 import java.util.Arrays;
 import java.util.List;

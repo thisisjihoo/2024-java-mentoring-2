@@ -1,6 +1,7 @@
-package com.racing.domain.domain.vo;
+package com.racing.domain.vo;
 
-import com.racing.domain.domain.exception.RandomValueOutOfRange;
+import com.racing.domain.Value;
+import com.racing.common.exception.RandomValueOutOfRange;
 
 import java.util.Random;
 

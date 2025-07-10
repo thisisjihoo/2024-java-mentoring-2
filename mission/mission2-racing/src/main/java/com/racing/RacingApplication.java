@@ -1,12 +1,12 @@
-package com.racing.domain;
+package com.racing;
 
-import com.racing.domain.controller.RacingController;
-import com.racing.domain.domain.Car.Car;
-import com.racing.domain.domain.Car.Cars;
-import com.racing.domain.domain.Racing;
-import com.racing.domain.domain.vo.RandomValue;
-import com.racing.domain.view.InputView;
-import com.racing.domain.view.OutputView;
+import com.racing.controller.RacingController;
+import com.racing.domain.Car.Car;
+import com.racing.domain.Car.Cars;
+import com.racing.domain.Racing;
+import com.racing.domain.vo.RandomValue;
+import com.racing.view.InputView;
+import com.racing.view.OutputView;
 
 import java.util.ArrayList;
 import java.util.List;

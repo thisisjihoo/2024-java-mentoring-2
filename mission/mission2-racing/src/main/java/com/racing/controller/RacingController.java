@@ -1,9 +1,9 @@
-package com.racing.domain.controller;
+package com.racing.controller;
 
-import com.racing.domain.domain.Car.Cars;
-import com.racing.domain.domain.Racing;
-import com.racing.domain.view.InputView;
-import com.racing.domain.view.OutputView;
+import com.racing.domain.Car.Cars;
+import com.racing.domain.Racing;
+import com.racing.view.InputView;
+import com.racing.view.OutputView;
 
 import java.util.List;
 

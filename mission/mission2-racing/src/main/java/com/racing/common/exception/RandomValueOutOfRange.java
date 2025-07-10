@@ -1,4 +1,4 @@
-package com.racing.domain.domain.exception;
+package com.racing.common.exception;
 
 public class RandomValueOutOfRange extends IndexOutOfBoundsException {
 
